@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/editArticle.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/addArticle.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/home.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/css/elegance.css</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/cart.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/src/java/com/mycompany/eleganceapp/servlet/OrderServlet.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/src/java/com/mycompany/eleganceapp/servlet/UserManagementServlet.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/manageUsers.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/orderSuccess.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/manageOrders.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/src/java/com/mycompany/eleganceapp/servlet/AdminServlet.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/header.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/footer.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/login.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/admin.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/src/java/com/mycompany/eleganceapp/servlet/RegisterServlet.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/src/java/com/mycompany/eleganceapp/servlet/ArticleDetailServlet.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/src/java/com/mycompany/eleganceapp/servlet/HomeServlet.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/index.html</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/index.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/articleDetails.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/src/java/com/mycompany/eleganceapp/servlet/LoginServlet.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/build.xml</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/images/elegance_composition_clean.png</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/images/default4.jpg</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/favorites.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/WEB-INF/beans.xml</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/manageOrders_backup.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/src/java/com/mycompany/eleganceapp/servlet/DashboardServlet.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/src/java/com/mycompany/eleganceapp/servlet/AdminFavoritesServlet.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/dashboard.jsp</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/EleganceApp/EleganceApp-war/web/register.jsp</file>
+        </group>
+    </open-files>
+</project-private>

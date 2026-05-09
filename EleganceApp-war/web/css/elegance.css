@@ -1,0 +1,362 @@
+/* =====================================================================
+   SYSTÈME DE DESIGN GLOBAL - ELEGANCE APP 2026
+   Luxe féminin ultra-raffiné – Glassmorphism, doré subtil, animations premium
+===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ───────────────── VARIABLES ───────────────── */
+:root {
+  --color-bg: #fdfaf8;
+  --color-surface: #ffffff;
+  --color-surface-2: #fcf8f5;
+  --color-blush: #fce9e6;
+  --color-rose-nude: #f5e0db;
+
+  --color-gold: #d4af37;
+  --color-gold-dark: #b38c3a;
+  --color-gold-light: #e8d4a0;
+
+  --color-text: #2f1e18;
+  --color-text-light: #6b5a54;
+  --color-text-lighter: #8f817c;
+  --color-border: rgba(212, 175, 55, 0.15);
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 40px;
+
+  --shadow-sm: 0 6px 20px rgba(212, 175, 55, 0.08);
+  --shadow-md: 0 14px 40px rgba(212, 175, 55, 0.16);
+  --shadow-lg: 0 30px 80px rgba(212, 175, 55, 0.25);
+
+  --ease-luxe: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* ───────────────── RESET ───────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* =====================================================================
+   PAGE DÉTAIL ARTICLE – STRUCTURE & DISPOSITION
+===================================================================== */
+
+.detail-main {
+  padding: 80px 6vw;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Grille principale */
+.boutique-grid {
+  display: grid;
+  grid-template-columns: minmax(420px, 1fr) minmax(420px, 1fr);
+  gap: 80px;
+  align-items: start;
+}
+
+/* ───────── IMAGE ───────── */
+.img-wrapper {
+  background: linear-gradient(145deg, #ffffff, #f9efeb);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+
+/* ───────── INFOS ───────── */
+.info-wrapper {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  border-radius: var(--radius-lg);
+  padding: 50px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* Catégorie */
+.article-cat {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+}
+
+/* Titre */
+.info-wrapper h1 {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+/* Prix */
+.article-price {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--color-gold);
+}
+
+/* Description */
+.article-desc {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  max-width: 520px;
+}
+
+/* ───────── ACTIONS ───────── */
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Bouton luxe */
+.btn-luxury {
+  padding: 16px 46px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, #fceceb, var(--color-gold));
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.4s var(--ease-luxe),
+    box-shadow 0.4s var(--ease-luxe);
+}
+
+.btn-luxury:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-luxury[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =====================================================================
+   ADMIN PANEL
+===================================================================== */
+
+.admin-panel {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid var(--color-border);
+}
+
+.admin-panel h4 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+.btn-admin {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 12px;
+  transition: all 0.35s var(--ease-luxe);
+}
+
+/* Modifier */
+.btn-edit {
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+  background: transparent;
+}
+
+.btn-edit:hover {
+  background: var(--color-gold);
+  color: #fff;
+}
+
+/* Supprimer */
+.btn-delete {
+  border: 2px solid #c94b4b;
+  color: #c94b4b;
+  background: transparent;
+}
+
+.btn-delete:hover {
+  background: #c94b4b;
+  color: #fff;
+}
+
+/* =====================================================================
+   BOUTONS FAVORIS ❤️
+===================================================================== */
+.favorite-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: all 0.3s var(--ease-luxe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-lighter);
+  font-size: 1.4rem;
+}
+
+.article-card .favorite-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+  z-index: 10;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.15);
+  color: #e74c3c;
+}
+
+.favorite-btn i.favorite-active {
+  color: #e74c3c !important;
+  animation: heartPop 0.4s var(--ease-luxe);
+}
+
+@keyframes heartPop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =====================================================================
+   RESPONSIVE
+===================================================================== */
+
+@media (max-width: 1100px) {
+  .boutique-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .info-wrapper {
+    padding: 40px;
+  }
+
+  .info-wrapper h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .detail-main {
+    padding: 50px 5vw;
+  }
+
+  .article-price {
+    font-size: 1.8rem;
+  }
+
+  .btn-luxury {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* =====================================================================
+   NOUVELLES FONCTIONNALITÉS UX
+===================================================================== */
+
+/* Scroll to Top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s var(--ease-luxe);
+  box-shadow: var(--shadow-md);
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  background: var(--color-gold);
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Cart Pulse Animation */
+@keyframes cartPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cart-pulse {
+  animation: cartPulse 0.5s var(--ease-luxe);
+  background-color: var(--color-gold) !important;
+  color: #fff !important;
+}

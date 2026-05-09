@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Lato:wght@300;400;500;600;700&display=swap');
+
+/* ================================
+   ROOT - Système de design luxe
+================================ */
+:root {
+    --color-bg: #fdfaf8;
+    --color-blush: #fce9e6;
+    --color-rose-nude: #f5e0db;
+    --color-gold: #d4af37;
+    --color-gold-dark: #b38c3a;
+    --color-gold-soft: #e8d4a0;
+    --color-gold-light: #f3e5ab;
+
+    --text-primary: #2f1e18;
+    --text-secondary: #5c4a44;
+    --text-light: #8a7a73;
+
+    --gradient-bg: linear-gradient(135deg, #fdfaf8 0%, #fce9e6 60%, #f5e0db 100%);
+    --gradient-gold: linear-gradient(135deg, #e8d4a0 0%, #d4af37 100%);
+
+    --shadow-soft: 0 8px 25px rgba(212, 175, 55, 0.10);
+    --shadow-card: 0 12px 38px rgba(212, 175, 55, 0.14);
+    --shadow-card-hover: 0 22px 52px rgba(212, 175, 55, 0.24);
+    --shadow-button: 0 8px 28px rgba(212, 175, 55, 0.22);
+
+    --radius-sm: 12px;
+    --radius: 18px;
+    --radius-lg: 30px;
+
+    --transition: all 0.38s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Dark theme overrides – applied when <body class="dark-theme"> */
+.dark-theme {
+    --color-bg: #1e1e1e;
+    --color-blush: #2a2a2a;
+    --color-rose-nude: #2f2f2f;
+    --color-gold: #c5a33f;
+    --color-gold-dark: #a58c33;
+    --color-gold-soft: #bfa85a;
+    --color-gold-light: #d9c26b;
+
+    --text-primary: #e0e0e0;
+    --text-secondary: #c0c0c0;
+    --text-light: #a0a0a0;
+
+    --gradient-bg: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 60%, #2f2f2f 100%);
+    --gradient-gold: linear-gradient(135deg, #bfa85a 0%, #c5a33f 100%);
+}
+
+/* ================================
+   BASE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: var(--gradient-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    /* Apply dark theme class if present */
+    transition: var(--transition);
+}
+
+/* ================================
+   HEADER & NAVIGATION
+================================ */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(253, 250, 248, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    box-shadow: var(--shadow-soft);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+}
+
+.luxury-logo {
+    height: 54px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.luxury-logo:hover {
+    transform: scale(1.04);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.98rem;
+    letter-spacing: 0.3px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-gold);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background: var(--color-gold);
+    transition: width 0.35s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ================================
+   BOUTONS GÉNÉRIQUES
+================================ */
+.btn-luxury,
+.btn-admin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 2rem;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 0.96rem;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-luxury {
+    background: var(--color-gold);
+    color: white;
+    box-shadow: var(--shadow-button);
+}
+
+.btn-luxury:hover {
+    background: var(--color-gold-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 38px rgba(212, 175, 55, 0.32);
+}
+
+.btn-admin {
+    padding: 0.65rem 1.4rem;
+    font-size: 0.86rem;
+    border-radius: var(--radius-sm);
+}
+
+.btn-edit {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.btn-delete {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.btn-delete:hover {
+    background: #ef9a9a;
+}
+
+/* ================================
+   ADMIN CONTAINER & TABLE
+================================ */
+.admin-container {
+    background: white;
+    padding: 2.2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+    margin: 2rem auto;
+    max-width: 1440px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+th {
+    text-align: left;
+    padding: 1rem 1.4rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    background: rgba(253, 250, 248, 0.6);
+    border-bottom: 1px solid var(--color-blush);
+}
+
+td {
+    padding: 1.1rem 1.4rem;
+    background: white;
+    border-bottom: 1px solid #f5f0ee;
+}
+
+/* ================================
+   TOAST NOTIFICATIONS
+================================ */
+.toast-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.toast {
+    background: white;
+    color: var(--text-primary);
+    padding: 1.1rem 1.6rem;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    border-left: 5px solid var(--color-gold);
+    min-width: 320px;
+    opacity: 0;
+    transform: translateX(120%);
+    animation: toastIn 0.45s forwards;
+}
+
+.toast.success {
+    border-left-color: #27ae60;
+}
+
+.toast.error {
+    border-left-color: #e74c3c;
+}
+
+@keyframes toastIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ================================
+   UTILITAIRES TYPO
+================================ */
+.font-display {
+    font-family: 'Playfair Display', serif;
+}
+
+.text-gold {
+    color: var(--color-gold);
+}
+
+.badge-admin {
+    background: var(--color-gold);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 992px) {
+    .nav-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .admin-container {
+        padding: 1.6rem;
+    }
+}

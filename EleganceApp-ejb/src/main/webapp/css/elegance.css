@@ -1,0 +1,219 @@
+/* =====================================================================
+   SYSTEME DE DESIGN GLOBAL - ELEGANCE APP
+   Version: 2026 - Luxe féminin ultra-raffiné, animations premium
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Variables avancées (couleurs + animations) ─────────────────────── */
+:root {
+  /* Couleurs principales */
+  --color-background:     #fdfaf8;
+  --color-surface:        #ffffff;
+  --color-surface-2:      #fcf8f5;
+  --color-blush:          #fce9e6;
+  --color-rose-nude:      #f5e0db;
+  --color-gold:           #d4af37;
+  --color-gold-dark:      #b38c3a;
+  --color-gold-light:     #e8d4a0;
+  --color-text-primary:   #2f1e18;
+  --color-text-secondary: #6b5a54;
+  --color-text-tertiary:  #8f817c;
+  --color-border:         rgba(212, 175, 55, 0.12);
+
+  /* Feedback couleurs */
+  --color-success:        #3d9c5f;
+  --color-warning:        #d69e2e;
+  --color-danger:         #c94b4b;
+  --color-info:           #4c8bf5;
+
+  /* Typographie */
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Espacements */
+  --space-1:  4px;   --space-2:  8px;   --space-3:  12px;
+  --space-4:  16px;  --space-5:  20px;  --space-6:  24px;
+  --space-8:  32px;  --space-10: 40px;  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Coins & ombres premium */
+  --radius-sm:    8px;
+  --radius-md:    12px;
+  --radius-lg:    16px;
+  --radius-pill:  9999px;
+
+  --shadow-sm:    0 2px 10px rgba(212,175,55,0.06);
+  --shadow-md:    0 10px 30px rgba(212,175,55,0.10);
+  --shadow-lg:    0 20px 60px rgba(212,175,55,0.16);
+  --shadow-hover: 0 28px 72px rgba(212,175,55,0.28);
+
+  /* Animations haut de gamme */
+  --ease-luxe-out:    cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-luxe-in-out: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --ease-dreamy:      cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-soft-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-gentle:  0.9s;
+  --duration-elegant: 1.25s;
+  --duration-dreamy:  1.8s;
+  --duration-luxslow: 2.6s;
+}
+
+/* ── Reset & base ───────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.62;
+  color: var(--color-text-primary);
+  background: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Animations avancées ultra-chic ─────────────────────────────────── */
+
+/* 1. Apparition luxe avec soulèvement organique + léger scale */
+@keyframes luxuryReveal {
+  0%   { opacity: 0; transform: translateY(48px) scale(0.97); }
+  70%  { opacity: 1; transform: translateY(-6px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0)    scale(1);   }
+}
+
+/* 2. Pop doux très féminin (pour boutons CTA principaux) */
+@keyframes elegantPop {
+  0%   { opacity: 0; transform: scale(0.88) translateY(16px); }
+  55%  { opacity: 1; transform: scale(1.06) translateY(-3px); }
+  100% { opacity: 1; transform: scale(1)    translateY(0);    }
+}
+
+/* 3. Pulsation ultra-subtile (badges, notifications, éléments à attirer l’œil) */
+@keyframes breatheLux {
+  0%, 100% { transform: scale(1);   opacity: 0.94; }
+  50%      { transform: scale(1.035); opacity: 1; }
+}
+
+/* 4. Shine doré fluide et lent (effet bijoux précieux) */
+@keyframes goldenFlow {
+  0%   { background-position: 300% 50%; }
+  100% { background-position: -300% 50%; }
+}
+
+/* 5. Bloom lumineux discret au hover (cartes, boutons) */
+@keyframes softBloom {
+  0%   { box-shadow: var(--shadow-md); }
+  100% { box-shadow: 0 0 40px rgba(212,175,55,0.28); }
+}
+
+/* ── Classes d'animation prêtes à l'emploi ───────────────────────────── */
+
+/* Apparition progressive très élégante */
+.reveal-lux {
+  opacity: 0;
+  animation: luxuryReveal var(--duration-dreamy) var(--ease-luxe-out) forwards;
+}
+
+/* Délais cascade ultra-raffinés pour grilles */
+.reveal-lux:nth-child(1)  { animation-delay: 0.15s; }
+.reveal-lux:nth-child(2)  { animation-delay: 0.28s; }
+.reveal-lux:nth-child(3)  { animation-delay: 0.41s; }
+.reveal-lux:nth-child(4)  { animation-delay: 0.54s; }
+.reveal-lux:nth-child(5)  { animation-delay: 0.67s; }
+.reveal-lux:nth-child(6)  { animation-delay: 0.80s; }
+
+/* Pop chic pour boutons principaux */
+.btn-pop-luxe {
+  animation: elegantPop 1.3s var(--ease-soft-bounce) both;
+}
+
+/* Pulsation très douce (badge promo, compteur panier, etc.) */
+.pulse-breath {
+  animation: breatheLux 4.2s infinite ease-in-out;
+}
+
+/* Shine doré lent et hypnotique */
+.golden-shine {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.12) 45%,
+    rgba(255,255,255,0.28) 50%,
+    rgba(255,255,255,0.12) 55%,
+    transparent 100%
+  );
+  background-size: 400% 100%;
+  animation: goldenFlow 9s linear infinite;
+}
+
+/* Hover bloom lumineux */
+.hover-bloom {
+  transition: box-shadow 0.8s var(--ease-dreamy), transform 0.8s var(--ease-dreamy);
+}
+
+.hover-bloom:hover {
+  transform: translateY(-12px);
+  animation: softBloom 1.2s forwards;
+}
+
+/* Application concrète sur éléments clés */
+.card,
+.article-card {
+  transition: transform 0.8s var(--ease-luxe-out), box-shadow 0.8s var(--ease-luxe-out);
+}
+
+.card:hover,
+.article-card:hover {
+  transform: translateY(-14px) scale(1.012);
+  box-shadow: 0 32px 80px rgba(212,175,55,0.32);
+}
+
+.btn-primary,
+.btn-primary-card,
+.btn-outline {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover,
+.btn-primary-card:hover,
+.btn-outline:hover {
+  animation: breatheLux 2.8s infinite ease-in-out;
+}
+
+/* ── Typographie + boutons + cartes (inchangé mais rappel) ───────────── */
+h1, .h1 { font-family: var(--font-display); font-size: 3.4rem; font-weight: 600; line-height: 1.12; }
+h2, .h2 { font-family: var(--font-display); font-size: 2.6rem; font-weight: 600; line-height: 1.18; }
+
+.btn-primary {
+  background: var(--color-gold);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background: var(--color-gold-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Utilisation recommandée */
+.card.reveal-lux,
+.article-card.reveal-lux,
+.promo-badge.pulse-breath,
+.btn-primary.btn-pop-luxe,
+.gold-shine {
+  /* ... */
+}
